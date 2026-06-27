@@ -28,21 +28,7 @@ import axios from "axios";
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
 const API = `${BACKEND_URL}/api`;
 
-// Brand logo icons (monochrome, inherit tile color via currentColor)
-const MetaIcon = ({ className }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M6.62 4.5c-2.2 0-3.62 2.2-3.62 5.02 0 1.18.27 2.2.74 2.9.5.72 1.2 1.08 2 1.08 1.1 0 1.9-.5 3.46-2.94.4-.62.86-1.36 1.36-2.2l1.1-1.86c-.78-1.06-1.4-1.7-2.16-2.36C8.66 4.5 7.7 4.5 6.62 4.5Zm10.76 0c-1.5 0-2.74.87-4.02 2.5-.5.64-1 1.4-1.56 2.3l-1.04 1.66c-.62 1-.94 1.5-1.46 2.2C8.1 16.94 7 17.5 5.96 17.5c-.8 0-1.5-.36-2-1.06-.3-.42-.5-.96-.6-1.6L3 14.84c.18 1.5 1.1 2.66 2.96 2.66 1.04 0 1.96-.5 3.04-1.96.62-.84 1.4-2 2.32-3.5l.74-1.3c.94-1.66 1.78-2.7 2.7-2.7.96 0 1.84.64 2.5 1.66.92 1.42 1.34 3.42 1.34 5.22 0 1.26-.3 2.36-1.5 2.36v2.1c2.04 0 3.4-1.5 3.4-3.66 0-2.22-.56-4.4-1.72-6.1C20.18 5.78 18.78 4.5 17.38 4.5Z"/>
-  </svg>
-);
-
-const GoogleAdsIcon = ({ className }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="9.5" y="1.5" width="5" height="17" rx="2.5" transform="rotate(-30 12 10)"/>
-    <rect x="9.5" y="5.5" width="5" height="17" rx="2.5" transform="rotate(30 12 14)"/>
-    <circle cx="6.6" cy="17.6" r="2.7"/>
-  </svg>
-);
-
+// Brand logo icon (monochrome, inherit tile color via currentColor)
 const TikTokIcon = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48Z"/>
@@ -492,13 +478,13 @@ export default function App() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                icon: MetaIcon,
+                img: "https://customer-assets.emergentagent.com/job_marketing-lokal/artifacts/aisy11i1_logo%20meta.jpg",
                 color: "blue",
                 title: "Meta Ads",
                 desc: "Iklan Facebook & Instagram yang tepat sasaran untuk menjangkau calon pelanggan ideal Anda.",
               },
               {
-                icon: GoogleAdsIcon,
+                img: "https://customer-assets.emergentagent.com/job_marketing-lokal/artifacts/ipo0wjc0_google%20ads.jpg",
                 color: "emerald",
                 title: "Google Ads",
                 desc: "Tampil di posisi teratas pencarian Google saat pelanggan mencari produk atau jasa Anda.",
@@ -516,7 +502,7 @@ export default function App() {
                 desc: "Bisnis Anda mudah ditemukan di Google Maps & pencarian lokal dengan profil yang optimal.",
               },
               {
-                icon: TrendingUp,
+                icon: Search,
                 color: "violet",
                 title: "SEO dan GEO",
                 desc: "Naikkan peringkat website secara organik agar dikunjungi ribuan calon pelanggan gratis.",
@@ -549,8 +535,12 @@ export default function App() {
                   className={`group border border-slate-200 rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:border-orange-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white ${idx === 6 ? 'lg:col-start-2' : ''}`}
                   data-testid={`service-card-${idx}`}
                 >
-                  <div className={`w-12 h-12 ${colorMap[service.color]} rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110`}>
-                    <Icon className="w-6 h-6" />
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${service.img ? 'bg-white border border-slate-200 p-2' : colorMap[service.color]}`}>
+                    {service.img ? (
+                      <img src={service.img} alt={`Logo ${service.title}`} className="w-full h-full object-contain" />
+                    ) : (
+                      <Icon className="w-6 h-6" />
+                    )}
                   </div>
                   <h3 className="font-heading font-extrabold text-slate-900 text-lg">{service.title}</h3>
                   <p className="text-slate-500 text-sm leading-relaxed">{service.desc}</p>
