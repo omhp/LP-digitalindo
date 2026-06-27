@@ -15,7 +15,12 @@ import {
   PhoneCall,
   RefreshCw,
   Clock,
-  Briefcase
+  Briefcase,
+  Megaphone,
+  Search,
+  Video,
+  MapPin,
+  Store
 } from "lucide-react";
 import axios from "axios";
 
@@ -285,6 +290,7 @@ export default function App() {
         </div>
         <nav className="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
           <a href="#calculator" className="hover:text-orange-600 transition-colors">Kalkulator Omset</a>
+          <a href="#services" className="hover:text-orange-600 transition-colors">Layanan</a>
           <a href="#ai-generator" className="hover:text-orange-600 transition-colors">Rekomendasi AI</a>
           <a href="#benefits" className="hover:text-orange-600 transition-colors">Keunggulan</a>
           <a href="#history" className="hover:text-orange-600 transition-colors">Riwayat UMKM</a>
@@ -443,6 +449,102 @@ export default function App() {
 
           </div>
 
+        </div>
+      </section>
+
+      {/* SERVICES SECTION */}
+      <section id="services" className="py-16 px-6 md:px-12 bg-white border-b border-slate-200" data-testid="services-section">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center space-y-3 mb-12">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-orange-100 text-orange-800 text-xs font-bold rounded-full uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 text-orange-600" />
+              <span>Layanan Kami</span>
+            </div>
+            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Solusi Digital Marketing Lengkap untuk UMKM
+            </h2>
+            <p className="text-slate-500 text-sm sm:text-base max-w-2xl mx-auto">
+              Dari iklan berbayar hingga optimasi organik, kami tangani seluruh kebutuhan digital bisnis Anda dalam satu tim ahli.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Megaphone,
+                color: "blue",
+                title: "Meta Ads",
+                desc: "Iklan Facebook & Instagram yang tepat sasaran untuk menjangkau calon pelanggan ideal Anda.",
+              },
+              {
+                icon: Search,
+                color: "emerald",
+                title: "Google Ads",
+                desc: "Tampil di posisi teratas pencarian Google saat pelanggan mencari produk atau jasa Anda.",
+              },
+              {
+                icon: Video,
+                color: "rose",
+                title: "TikTok Ads",
+                desc: "Manfaatkan tren viral TikTok untuk menjangkau audiens muda dengan biaya efisien.",
+              },
+              {
+                icon: MapPin,
+                color: "orange",
+                title: "Optimasi Google Business Profile",
+                desc: "Bisnis Anda mudah ditemukan di Google Maps & pencarian lokal dengan profil yang optimal.",
+              },
+              {
+                icon: TrendingUp,
+                color: "violet",
+                title: "SEO",
+                desc: "Naikkan peringkat website secara organik agar dikunjungi ribuan calon pelanggan gratis.",
+              },
+              {
+                icon: Store,
+                color: "amber",
+                title: "Optimasi Marketplace",
+                desc: "Optimasi toko Shopee, Tokopedia & TikTok Shop agar produk laris dan mudah ditemukan.",
+              },
+            ].map((service, idx) => {
+              const Icon = service.icon;
+              const colorMap = {
+                blue: "bg-blue-100 text-blue-600",
+                emerald: "bg-emerald-100 text-emerald-600",
+                rose: "bg-rose-100 text-rose-600",
+                orange: "bg-orange-100 text-[#EA580C]",
+                violet: "bg-violet-100 text-violet-600",
+                amber: "bg-amber-100 text-amber-600",
+              };
+              return (
+                <div
+                  key={idx}
+                  className="group border border-slate-200 rounded-2xl p-6 space-y-4 hover:border-orange-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white"
+                  data-testid={`service-card-${idx}`}
+                >
+                  <div className={`w-12 h-12 ${colorMap[service.color]} rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110`}>
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-heading font-extrabold text-slate-900 text-lg">{service.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">{service.desc}</p>
+                  <button
+                    onClick={() => {
+                      setLeadForm((prev) => ({
+                        ...prev,
+                        business_desc: `Tertarik dengan layanan: ${service.title}`,
+                      }));
+                      setShowLeadModal(true);
+                    }}
+                    className="text-orange-600 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all duration-300"
+                    data-testid={`service-cta-${idx}`}
+                  >
+                    <span>Konsultasi Layanan Ini</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -817,6 +919,7 @@ export default function App() {
           <div className="space-y-2">
             <h4 className="font-bold text-sm text-orange-500">Menu Utama</h4>
             <ul className="text-slate-400 text-xs space-y-1">
+              <li><a href="#services" className="hover:text-white">Layanan</a></li>
               <li><a href="#calculator" className="hover:text-white">Kalkulator Potensi</a></li>
               <li><a href="#ai-generator" className="hover:text-white">Asisten AI</a></li>
               <li><a href="#benefits" className="hover:text-white">Keunggulan</a></li>
