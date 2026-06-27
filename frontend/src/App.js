@@ -497,7 +497,7 @@ export default function App() {
               {
                 icon: TrendingUp,
                 color: "violet",
-                title: "SEO",
+                title: "SEO dan GEO",
                 desc: "Naikkan peringkat website secara organik agar dikunjungi ribuan calon pelanggan gratis.",
               },
               {
