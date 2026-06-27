@@ -382,9 +382,9 @@ export default function App() {
             {/* Social Proof Trust Indicator */}
             <div className="pt-4 border-t border-slate-200 flex flex-wrap items-center gap-4">
               <div className="flex -space-x-3">
-                <img className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" alt="UMKM Owner" />
-                <img className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" alt="UMKM Owner" />
-                <img className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" alt="UMKM Owner" />
+                <img className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://static.prod-images.emergentagent.com/jobs/a4954151-b90d-4600-854b-f4b11d9cff00/images/803284c344bb65b2c6f98d54059985d4cf447263dbbdfe966cfe2dad230a7b75.png" alt="Pemilik UMKM Indonesia" />
+                <img className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://static.prod-images.emergentagent.com/jobs/a4954151-b90d-4600-854b-f4b11d9cff00/images/7d5a9e26a15afaf4f8a563266fa31145883ea66375717202b98427ac1215b4c6.png" alt="Pemilik UMKM Indonesia" />
+                <img className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://static.prod-images.emergentagent.com/jobs/a4954151-b90d-4600-854b-f4b11d9cff00/images/908bf057b5080f2e5f4afb3c1089a87619e98bb98bdf3c9f30bb13682cc60ce8.png" alt="Pemilik UMKM Indonesia" />
               </div>
               <div className="text-sm">
                 <p className="font-extrabold text-slate-900" data-testid="trust-social-proof">Dipercaya 500+ UMKM Indonesia</p>
@@ -402,8 +402,8 @@ export default function App() {
             {/* Base Cafe Owner Image */}
             <div className="relative w-full max-w-[460px] h-[340px] sm:h-[420px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white transform transition-all duration-500 hover:rotate-1 hover:scale-[1.02]">
               <img 
-                src="https://images.pexels.com/photos/36729739/pexels-photo-36729739.jpeg" 
-                alt="Pemilik Cafe UMKM Sukses" 
+                src="https://images.pexels.com/photos/5670135/pexels-photo-5670135.jpeg" 
+                alt="Pemilik Cafe UMKM Indonesia Sukses" 
                 className="w-full h-full object-cover"
                 data-testid="hero-owner-image"
               />
@@ -525,7 +525,7 @@ export default function App() {
               return (
                 <div
                   key={idx}
-                  className="group border border-slate-200 rounded-2xl p-6 space-y-4 hover:border-orange-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white"
+                  className={`group border border-slate-200 rounded-2xl p-6 space-y-4 hover:border-orange-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white ${idx === 6 ? 'lg:col-start-2' : ''}`}
                   data-testid={`service-card-${idx}`}
                 >
                   <div className={`w-12 h-12 ${colorMap[service.color]} rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110`}>
