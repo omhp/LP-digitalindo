@@ -20,7 +20,8 @@ import {
   Search,
   Video,
   MapPin,
-  Store
+  Store,
+  PenTool
 } from "lucide-react";
 import axios from "axios";
 
@@ -293,7 +294,6 @@ export default function App() {
           <a href="#services" className="hover:text-orange-600 transition-colors">Layanan</a>
           <a href="#ai-generator" className="hover:text-orange-600 transition-colors">Rekomendasi AI</a>
           <a href="#benefits" className="hover:text-orange-600 transition-colors">Keunggulan</a>
-          <a href="#history" className="hover:text-orange-600 transition-colors">Riwayat UMKM</a>
         </nav>
         <button 
           onClick={() => setShowLeadModal(true)}
@@ -505,6 +505,12 @@ export default function App() {
                 color: "amber",
                 title: "Optimasi Marketplace",
                 desc: "Optimasi toko Shopee, Tokopedia & TikTok Shop agar produk laris dan mudah ditemukan.",
+              },
+              {
+                icon: PenTool,
+                color: "blue",
+                title: "Desain Grafis",
+                desc: "Konten visual & materi promosi profesional yang menarik perhatian dan memperkuat brand Anda.",
               },
             ].map((service, idx) => {
               const Icon = service.icon;
@@ -856,53 +862,6 @@ export default function App() {
               <p className="text-slate-500 text-sm">Laporan performa penjualan dan kampanye harian yang dikirim langsung ke WhatsApp Anda, ringkas dan bebas pusing.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* RIWAYAT UMKM / HISTORY GENERATOR */}
-      <section id="history" className="py-16 px-6 md:px-12 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-5xl mx-auto space-y-8">
-          <div className="text-center space-y-3">
-            <span className="text-orange-600 text-xs font-bold uppercase tracking-widest">Inspirasi Nyata</span>
-            <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Ide Digital Pemasaran UMKM Lain</h2>
-            <p className="text-slate-500 text-xs sm:text-sm">Klik pada riwayat pencarian strategi AI di bawah ini untuk melihat contoh taktik promosi kustom.</p>
-          </div>
-
-          {briefHistory && briefHistory.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {briefHistory.map((brief, index) => (
-                <div 
-                  key={brief.id || index}
-                  onClick={() => handleSelectHistoryBrief(brief)}
-                  className={`bg-white border p-5 rounded-2xl cursor-pointer hover:border-orange-500 hover:shadow-md transition-all duration-300 text-left flex flex-col justify-between ${
-                    selectedBrief && selectedBrief.id === brief.id ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-slate-200'
-                  }`}
-                  data-testid={`ai-brief-history-item-${index}`}
-                >
-                  <div className="space-y-2">
-                    <div className="flex justify-between items-start gap-1">
-                      <h4 className="font-heading font-extrabold text-slate-900 text-sm truncate max-w-[150px]">{brief.business_name}</h4>
-                      <span className="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-semibold truncate shrink-0">{brief.business_category}</span>
-                    </div>
-                    <p className="text-xs text-slate-500 line-clamp-3 leading-relaxed">{brief.brief_content}</p>
-                  </div>
-                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      <span>{new Date(brief.timestamp).toLocaleDateString("id-ID")}</span>
-                    </span>
-                    <span className="text-orange-600 font-bold hover:underline">Lihat Detail →</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 text-center text-slate-400 max-w-sm mx-auto space-y-2">
-              <Briefcase className="w-8 h-8 mx-auto text-slate-300" />
-              <p className="font-bold text-sm text-slate-600">Belum ada riwayat strategi</p>
-              <p className="text-xs">Jadilah yang pertama merancang taktik menggunakan formulir di atas!</p>
-            </div>
-          )}
         </div>
       </section>
 
