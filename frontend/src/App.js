@@ -906,15 +906,14 @@ export default function App() {
           <div className="space-y-2">
             <h4 className="font-bold text-sm text-orange-500">Hubungi Kami</h4>
             <ul className="text-slate-400 text-xs space-y-1">
-              <li>info@digitalindo.co.id</li>
+              <li>info@digitalindo.net</li>
               <li>Pontianak, Indonesia</li>
               <li>+62 812-3456-789</li>
             </ul>
           </div>
         </div>
-        <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-slate-800 text-center text-slate-500 text-xs flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-slate-800 text-center text-slate-500 text-xs">
           <p>© 2026 Digitalindo. Hak Cipta Dilindungi Undang-Undang.</p>
-          <a href="https://emergent.sh" target="_blank" rel="noopener noreferrer" className="hover:text-slate-400">Powered by emergent.sh</a>
         </div>
       </footer>
 
