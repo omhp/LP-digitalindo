@@ -3,485 +3,352 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
   <title>Digitalindo - Digital Marketing Khusus UMKM</title>
   <meta name="description" content="Digitalindo membantu UMKM meningkatkan penjualan, membangun brand kuat, dan menjangkau ribuan pelanggan baru melalui digital marketing yang efektif." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            heading: ['Outfit', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
-<body class="bg-[#F8FAFC] antialiased text-[#0F172A]">
+<body>
 
-  <!-- Top Trust Bar -->
-  <div class="bg-[#0F172A] text-white py-2 px-4 text-xs sm:text-sm flex flex-wrap justify-between items-center border-b border-white/10">
-    <div class="flex items-center gap-2">
-      <i class="fa-solid fa-award text-orange-500"></i>
-      <span>Google &amp; Meta Certified Partner</span>
-      <span class="hidden sm:inline text-white/40">|</span>
-      <span class="hidden sm:inline text-orange-500 font-semibold">Garansi Strategi Terbukti Efektif</span>
-    </div>
-    <div class="flex items-center gap-3">
-      <span class="hidden md:inline text-white/70">Butuh bantuan mendesak?</span>
-      <a href="https://wa.me/628123456789" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-orange-500 font-bold hover:underline">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span>Chat WhatsApp</span>
-      </a>
+  <!-- SVG icon sprite -->
+  <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-calc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14v4M8 18h4"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7l1.5-3h17L22 7M3 7v13h18V7M3 7h18M9 20v-6h6v6"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="M18 13 14.5 5.5 2 2l3.5 12.5L13 18z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-dollar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9 9 0 0 1 6.7 3L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9 9 0 0 1-6.7-3L3 16"/><path d="M3 21v-5h5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></symbol>
+  </svg>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="grp">
+        <svg class="ic" style="color:#fb923c"><use href="#i-award"/></svg>
+        <span>Google &amp; Meta Certified Partner</span>
+        <span class="sep">|</span>
+        <span class="accent">Garansi Strategi Terbukti Efektif</span>
+      </div>
+      <div class="grp">
+        <span class="muted-sm hide-sm hidden">Butuh bantuan mendesak?</span>
+        <a class="wa" href="https://wa.me/628123456789" target="_blank" rel="noopener">
+          <svg class="ic" style="width:16px;height:16px"><use href="#i-wa"/></svg><span>Chat WhatsApp</span>
+        </a>
+      </div>
     </div>
   </div>
 
   <!-- Header -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
-    <div class="flex items-center gap-2">
-      <div class="w-10 h-10 bg-orange-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg shadow-orange-600/30">D</div>
-      <div>
-        <span class="font-heading text-xl font-extrabold tracking-tight block text-slate-900">Digitalindo</span>
-        <span class="text-[10px] uppercase font-bold tracking-widest text-orange-600 -mt-1 block">Digital Khusus UMKM</span>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">D</div>
+        <div>
+          <span class="name">Digitalindo</span>
+          <span class="tag">Digital Khusus UMKM</span>
+        </div>
       </div>
+      <nav class="nav">
+        <a href="#calculator">Kalkulator Omset</a>
+        <a href="#services">Layanan</a>
+        <a href="#ai-generator">Rekomendasi AI</a>
+        <a href="#benefits">Keunggulan</a>
+      </nav>
+      <button class="btn btn-dark" onclick="openLeadModal()">Mulai Sekarang <svg class="ic" style="width:16px;height:16px"><use href="#i-arrow-right"/></svg></button>
     </div>
-    <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
-      <a href="#calculator" class="hover:text-orange-600 transition-colors">Kalkulator Omset</a>
-      <a href="#services" class="hover:text-orange-600 transition-colors">Layanan</a>
-      <a href="#ai-generator" class="hover:text-orange-600 transition-colors">Rekomendasi AI</a>
-      <a href="#benefits" class="hover:text-orange-600 transition-colors">Keunggulan</a>
-    </nav>
-    <button onclick="openLeadModal()" class="bg-slate-900 text-white hover:bg-orange-600 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-orange-600/20 flex items-center gap-2 group">
-      <span>Mulai Sekarang</span>
-      <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-    </button>
   </header>
 
-  <!-- HERO -->
-  <section class="relative bg-grid-pattern py-12 md:py-20 px-6 md:px-12 lg:px-24 overflow-hidden border-b border-slate-200">
-    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-100/40 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/3"></div>
-    <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-50/50 rounded-full blur-3xl -z-10 -translate-x-1/3 translate-y-1/3"></div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge"><svg class="ic" style="width:14px;height:14px"><use href="#i-sparkles"/></svg> Digital Marketing Khusus UMKM</span>
+        <h1>Ledakkan Penjualan UMKM Anda dengan Digital Marketing</h1>
+        <p class="lead">Kami membantu UMKM meningkatkan penjualan, membangun brand kuat, dan menjangkau ribuan pelanggan baru melalui strategi pemasaran digital yang terbukti efektif.</p>
 
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div class="space-y-8 animate-fade-in-up">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-orange-100 text-orange-800 text-xs font-bold rounded-full uppercase tracking-wider">
-          <i class="fa-solid fa-wand-magic-sparkles text-orange-600"></i>
-          <span>Digital Marketing Khusus UMKM</span>
+        <div class="points">
+          <div class="point"><svg class="ic"><use href="#i-check"/></svg><div><h3>Tingkatkan Penjualan Hingga 300%</h3><p>Metode teruji dan disesuaikan untuk skala mikro &amp; kecil.</p></div></div>
+          <div class="point"><svg class="ic"><use href="#i-check"/></svg><div><h3>Jangkau Ribuan Pelanggan Baru</h3><p>Target audiens lokal yang tepat sasaran di sekitar gerai Anda.</p></div></div>
+          <div class="point"><svg class="ic"><use href="#i-check"/></svg><div><h3>Bangun Brand yang Kuat</h3><p>Identitas profesional yang membuat UMKM dipercaya &amp; bersaing.</p></div></div>
         </div>
 
-        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight">
-          Ledakkan Penjualan UMKM Anda dengan Digital Marketing
-        </h1>
-
-        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
-          Kami membantu UMKM meningkatkan penjualan, membangun brand kuat, dan menjangkau ribuan pelanggan baru melalui strategi pemasaran digital yang terbukti efektif.
-        </p>
-
-        <div class="space-y-3.5">
-          <div class="flex items-start gap-3">
-            <i class="fa-solid fa-circle-check text-emerald-500 text-xl shrink-0 mt-0.5"></i>
-            <div>
-              <h3 class="font-bold text-slate-900 text-base">Tingkatkan Penjualan Hingga 300%</h3>
-              <p class="text-slate-500 text-sm">Metode teruji dan disesuaikan untuk skala mikro &amp; kecil.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <i class="fa-solid fa-circle-check text-emerald-500 text-xl shrink-0 mt-0.5"></i>
-            <div>
-              <h3 class="font-bold text-slate-900 text-base">Jangkau Ribuan Pelanggan Baru</h3>
-              <p class="text-slate-500 text-sm">Target audiens lokal yang tepat sasaran di sekitar gerai Anda.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <i class="fa-solid fa-circle-check text-emerald-500 text-xl shrink-0 mt-0.5"></i>
-            <div>
-              <h3 class="font-bold text-slate-900 text-base">Bangun Brand yang Kuat</h3>
-              <p class="text-slate-500 text-sm">Identitas profesional yang membuat UMKM dipercaya &amp; bersaing.</p>
-            </div>
-          </div>
+        <div class="cta-row">
+          <button class="btn btn-primary pulse" onclick="openLeadModal()">Konsultasi Gratis Sekarang</button>
+          <a class="btn btn-outline" href="#calculator"><svg class="ic" style="color:#64748b"><use href="#i-calc"/></svg> Hitung Potensi Omset</a>
         </div>
 
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-          <button onclick="openLeadModal()" class="bg-[#EA580C] text-white hover:bg-orange-600 px-8 py-4 rounded-2xl font-bold text-base md:text-lg text-center transition-all duration-300 shadow-xl shadow-orange-600/30 animate-pulse-subtle active:scale-95">
-            Konsultasi Gratis Sekarang
-          </button>
-          <a href="#calculator" class="bg-white text-slate-900 border-2 border-slate-200 hover:border-orange-500 px-6 py-4 rounded-2xl font-bold text-base text-center transition-all duration-300 flex items-center justify-center gap-2 hover:bg-slate-50 active:scale-95">
-            <i class="fa-solid fa-calculator text-slate-500"></i>
-            <span>Hitung Potensi Omset</span>
-          </a>
-        </div>
-
-        <div class="pt-4 border-t border-slate-200 flex flex-wrap items-center gap-4">
-          <div class="flex -space-x-3">
-            <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://static.prod-images.emergentagent.com/jobs/a4954151-b90d-4600-854b-f4b11d9cff00/images/803284c344bb65b2c6f98d54059985d4cf447263dbbdfe966cfe2dad230a7b75.png" alt="Pemilik UMKM Indonesia" />
-            <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://static.prod-images.emergentagent.com/jobs/a4954151-b90d-4600-854b-f4b11d9cff00/images/7d5a9e26a15afaf4f8a563266fa31145883ea66375717202b98427ac1215b4c6.png" alt="Pemilik UMKM Indonesia" />
-            <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://static.prod-images.emergentagent.com/jobs/a4954151-b90d-4600-854b-f4b11d9cff00/images/908bf057b5080f2e5f4afb3c1089a87619e98bb98bdf3c9f30bb13682cc60ce8.png" alt="Pemilik UMKM Indonesia" />
-          </div>
-          <div class="text-sm">
-            <p class="font-extrabold text-slate-900">Dipercaya 500+ UMKM Indonesia</p>
-            <p class="text-slate-500">Mulai dari kafe kuliner, fashion, hingga jasa lokal.</p>
-          </div>
+        <div class="social-proof">
+          <p class="big">Dipercaya 500+ UMKM Indonesia</p>
+          <p class="sub">Mulai dari kafe kuliner, fashion, hingga jasa lokal.</p>
         </div>
       </div>
 
-      <!-- Right Visual -->
-      <div class="relative flex justify-center items-center lg:h-[550px] animate-fade-in-up animation-delay-200">
-        <div class="absolute inset-0 bg-gradient-to-tr from-orange-200/50 to-blue-200/40 rounded-3xl -z-10 rotate-3 transform scale-95 lg:scale-105"></div>
-        <div class="relative w-full max-w-[460px] h-[340px] sm:h-[420px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white transform transition-all duration-500 hover:rotate-1 hover:scale-[1.02]">
-          <img src="https://images.pexels.com/photos/5670135/pexels-photo-5670135.jpeg" alt="Pemilik Cafe UMKM Indonesia Sukses" class="w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
-          <div class="absolute bottom-4 left-4 bg-slate-900/90 text-white px-3 py-1.5 rounded-lg text-xs font-semibold backdrop-blur-sm">
-            Warung Kopi Sejahtera • Mitra Digitalindo
-          </div>
+      <div class="hero-visual">
+        <div class="visual-img">
+          <img src="https://images.pexels.com/photos/5670135/pexels-photo-5670135.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Pemilik kafe UMKM Indonesia yang sukses" width="460" height="376" fetchpriority="high" decoding="async" />
+          <span class="cap">Warung Kopi Sejahtera • Mitra Digitalindo</span>
         </div>
-
-        <div class="absolute -bottom-8 -left-2 sm:left-4 md:-left-8 max-w-[280px] rounded-2xl shadow-xl glass-card p-4 animate-float border border-white">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">
-              <i class="fa-solid fa-arrow-trend-up"></i>
-            </div>
-            <div>
-              <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Hasil Kampanye</span>
-              <span class="font-heading font-extrabold text-slate-800 text-sm">Omset Naik +300%</span>
-            </div>
+        <div class="analytics-card">
+          <div class="row">
+            <div class="ico"><svg class="ic"><use href="#i-trend"/></svg></div>
+            <div><span class="lbl">Hasil Kampanye</span><span class="val">Omset Naik +300%</span></div>
           </div>
-          <div class="w-full h-24 rounded-lg overflow-hidden relative mb-2">
-            <img src="https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg" alt="Grafik Kenaikan Penjualan" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-orange-600/10 mix-blend-multiply"></div>
-          </div>
-          <div class="flex justify-between items-center text-[11px] text-slate-500">
-            <span>Anggaran: Rp 25.000/hari</span>
-            <span class="text-emerald-600 font-bold">Sangat Efisien!</span>
-          </div>
+          <div class="chart"><img src="https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Grafik kenaikan penjualan" width="248" height="80" loading="lazy" decoding="async" /></div>
+          <div class="meta"><span>Anggaran: Rp 25.000/hari</span><span class="ok">Sangat Efisien!</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="py-16 px-6 md:px-12 bg-white border-b border-slate-200">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center space-y-3 mb-12">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-orange-100 text-orange-800 text-xs font-bold rounded-full uppercase tracking-wider">
-          <i class="fa-solid fa-wand-magic-sparkles text-orange-600"></i>
-          <span>Layanan Kami</span>
-        </div>
-        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Solusi Digital Marketing Lengkap untuk UMKM</h2>
-        <p class="text-slate-500 text-sm sm:text-base max-w-2xl mx-auto">Dari iklan berbayar hingga optimasi organik, kami tangani seluruh kebutuhan digital bisnis Anda dalam satu tim ahli.</p>
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow orange"><svg class="ic" style="width:14px;height:14px"><use href="#i-sparkles"/></svg> Layanan Kami</span>
+        <h2>Solusi Digital Marketing Lengkap untuk UMKM</h2>
+        <p>Dari iklan berbayar hingga optimasi organik, kami tangani seluruh kebutuhan digital bisnis Anda dalam satu tim ahli.</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Meta Ads -->
-        <div class="group border border-slate-200 rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:border-orange-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 bg-blue-100 p-2">
-            <img src="https://customer-assets.emergentagent.com/job_marketing-lokal/artifacts/aisy11i1_logo%20meta.jpg" alt="Logo Meta Ads" class="w-full h-full object-contain mix-blend-multiply" />
-          </div>
-          <h3 class="font-heading font-extrabold text-slate-900 text-lg">Meta Ads</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Iklan Facebook &amp; Instagram yang tepat sasaran untuk menjangkau calon pelanggan ideal Anda.</p>
-          <button class="service-cta text-orange-600 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all duration-300" data-service="Meta Ads"><span>Konsultasi Layanan Ini</span><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="tile tile-blue img"><img src="https://customer-assets.emergentagent.com/job_marketing-lokal/artifacts/aisy11i1_logo%20meta.jpg" alt="Logo Meta Ads" width="32" height="32" loading="lazy" decoding="async" /></div>
+          <h3>Meta Ads</h3>
+          <p>Iklan Facebook &amp; Instagram yang tepat sasaran untuk menjangkau calon pelanggan ideal Anda.</p>
+          <button class="service-cta" data-service="Meta Ads">Konsultasi Layanan Ini <svg class="ic"><use href="#i-arrow-right"/></svg></button>
         </div>
-        <!-- Google Ads -->
-        <div class="group border border-slate-200 rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:border-orange-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 bg-emerald-100 p-2">
-            <img src="https://customer-assets.emergentagent.com/job_marketing-lokal/artifacts/ipo0wjc0_google%20ads.jpg" alt="Logo Google Ads" class="w-full h-full object-contain mix-blend-multiply" />
-          </div>
-          <h3 class="font-heading font-extrabold text-slate-900 text-lg">Google Ads</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Tampil di posisi teratas pencarian Google saat pelanggan mencari produk atau jasa Anda.</p>
-          <button class="service-cta text-orange-600 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all duration-300" data-service="Google Ads"><span>Konsultasi Layanan Ini</span><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="service-card">
+          <div class="tile tile-emerald img"><img src="https://customer-assets.emergentagent.com/job_marketing-lokal/artifacts/ipo0wjc0_google%20ads.jpg" alt="Logo Google Ads" width="32" height="32" loading="lazy" decoding="async" /></div>
+          <h3>Google Ads</h3>
+          <p>Tampil di posisi teratas pencarian Google saat pelanggan mencari produk atau jasa Anda.</p>
+          <button class="service-cta" data-service="Google Ads">Konsultasi Layanan Ini <svg class="ic"><use href="#i-arrow-right"/></svg></button>
         </div>
-        <!-- TikTok Ads -->
-        <div class="group border border-slate-200 rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:border-orange-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 bg-rose-100 text-rose-600">
-            <i class="fa-brands fa-tiktok text-xl"></i>
-          </div>
-          <h3 class="font-heading font-extrabold text-slate-900 text-lg">TikTok Ads</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Manfaatkan tren viral TikTok untuk menjangkau audiens muda dengan biaya efisien.</p>
-          <button class="service-cta text-orange-600 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all duration-300" data-service="TikTok Ads"><span>Konsultasi Layanan Ini</span><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="service-card">
+          <div class="tile tile-rose"><svg class="ic"><use href="#i-tiktok"/></svg></div>
+          <h3>TikTok Ads</h3>
+          <p>Manfaatkan tren viral TikTok untuk menjangkau audiens muda dengan biaya efisien.</p>
+          <button class="service-cta" data-service="TikTok Ads">Konsultasi Layanan Ini <svg class="ic"><use href="#i-arrow-right"/></svg></button>
         </div>
-        <!-- GBP -->
-        <div class="group border border-slate-200 rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:border-orange-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 bg-orange-100 text-[#EA580C]">
-            <i class="fa-solid fa-location-dot text-xl"></i>
-          </div>
-          <h3 class="font-heading font-extrabold text-slate-900 text-lg">Optimasi Google Business Profile</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Bisnis Anda mudah ditemukan di Google Maps &amp; pencarian lokal dengan profil yang optimal.</p>
-          <button class="service-cta text-orange-600 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all duration-300" data-service="Optimasi Google Business Profile"><span>Konsultasi Layanan Ini</span><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="service-card">
+          <div class="tile tile-orange"><svg class="ic"><use href="#i-pin"/></svg></div>
+          <h3>Optimasi Google Business Profile</h3>
+          <p>Bisnis Anda mudah ditemukan di Google Maps &amp; pencarian lokal dengan profil yang optimal.</p>
+          <button class="service-cta" data-service="Optimasi Google Business Profile">Konsultasi Layanan Ini <svg class="ic"><use href="#i-arrow-right"/></svg></button>
         </div>
-        <!-- SEO dan GEO -->
-        <div class="group border border-slate-200 rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:border-orange-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 bg-violet-100 text-violet-600">
-            <i class="fa-solid fa-magnifying-glass text-xl"></i>
-          </div>
-          <h3 class="font-heading font-extrabold text-slate-900 text-lg">SEO dan GEO</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Naikkan peringkat website secara organik agar dikunjungi ribuan calon pelanggan gratis.</p>
-          <button class="service-cta text-orange-600 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all duration-300" data-service="SEO dan GEO"><span>Konsultasi Layanan Ini</span><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="service-card">
+          <div class="tile tile-violet"><svg class="ic"><use href="#i-monitor"/></svg></div>
+          <h3>Optimasi Website/Landing Page</h3>
+          <p>Website &amp; landing page cepat dan menarik yang dioptimalkan untuk konversi tinggi, mengubah pengunjung menjadi pembeli.</p>
+          <button class="service-cta" data-service="Optimasi Website/Landing Page">Konsultasi Layanan Ini <svg class="ic"><use href="#i-arrow-right"/></svg></button>
         </div>
-        <!-- Marketplace -->
-        <div class="group border border-slate-200 rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:border-orange-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 bg-amber-100 text-amber-600">
-            <i class="fa-solid fa-store text-xl"></i>
-          </div>
-          <h3 class="font-heading font-extrabold text-slate-900 text-lg">Optimasi Marketplace</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Optimasi toko Shopee, Tokopedia &amp; TikTok Shop agar produk laris dan mudah ditemukan.</p>
-          <button class="service-cta text-orange-600 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all duration-300" data-service="Optimasi Marketplace"><span>Konsultasi Layanan Ini</span><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="service-card">
+          <div class="tile tile-amber"><svg class="ic"><use href="#i-store"/></svg></div>
+          <h3>Optimasi Marketplace</h3>
+          <p>Optimasi toko Shopee, Tokopedia &amp; TikTok Shop agar produk laris dan mudah ditemukan.</p>
+          <button class="service-cta" data-service="Optimasi Marketplace">Konsultasi Layanan Ini <svg class="ic"><use href="#i-arrow-right"/></svg></button>
         </div>
-        <!-- Desain Grafis (centered) -->
-        <div class="group border border-slate-200 rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:border-orange-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white lg:col-start-2">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 bg-blue-100 text-blue-600">
-            <i class="fa-solid fa-pen-nib text-xl"></i>
-          </div>
-          <h3 class="font-heading font-extrabold text-slate-900 text-lg">Desain Grafis</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Konten visual &amp; materi promosi profesional yang menarik perhatian dan memperkuat brand Anda.</p>
-          <button class="service-cta text-orange-600 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all duration-300" data-service="Desain Grafis"><span>Konsultasi Layanan Ini</span><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="service-card">
+          <div class="tile tile-emerald"><svg class="ic"><use href="#i-search"/></svg></div>
+          <h3>SEO, AEO dan GEO</h3>
+          <p>Naikkan peringkat website secara organik agar dikunjungi ribuan calon pelanggan gratis.</p>
+          <button class="service-cta" data-service="SEO, AEO dan GEO">Konsultasi Layanan Ini <svg class="ic"><use href="#i-arrow-right"/></svg></button>
+        </div>
+        <div class="service-card">
+          <div class="tile tile-blue"><svg class="ic"><use href="#i-pen"/></svg></div>
+          <h3>Desain Grafis</h3>
+          <p>Konten visual &amp; materi promosi profesional yang menarik perhatian dan memperkuat brand Anda.</p>
+          <button class="service-cta" data-service="Desain Grafis">Konsultasi Layanan Ini <svg class="ic"><use href="#i-arrow-right"/></svg></button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CALCULATOR -->
-  <section id="calculator" class="py-16 px-6 md:px-12 bg-white border-b border-slate-200">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center space-y-3 mb-10">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-50 text-blue-800 text-xs font-bold rounded-full">
-          <i class="fa-solid fa-calculator text-blue-600"></i>
-          <span>Simulasi Omset Bisnis</span>
-        </div>
-        <h2 class="font-heading text-3xl font-extrabold text-slate-900 tracking-tight">Hitung Potensi Kenaikan Omset Anda</h2>
-        <p class="text-slate-500 text-sm sm:text-base max-w-xl mx-auto">Geser nilai omset bulanan Anda sekarang untuk melihat estimasi pertumbuhan omset setelah dikelola secara digital oleh Digitalindo.</p>
+  <!-- Calculator -->
+  <section id="calculator" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow blue"><svg class="ic" style="width:14px;height:14px"><use href="#i-calc"/></svg> Simulasi Omset Bisnis</span>
+        <h2>Hitung Potensi Kenaikan Omset Anda</h2>
+        <p>Geser nilai omset bulanan Anda sekarang untuk melihat estimasi pertumbuhan setelah dikelola secara digital oleh Digitalindo.</p>
       </div>
 
-      <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center shadow-sm">
-        <div class="space-y-6">
-          <div class="space-y-2">
-            <div class="flex justify-between text-sm">
-              <span class="text-slate-600 font-semibold">Omset Bulanan Saat Ini:</span>
-              <span id="calc-initial-display" class="text-slate-900 font-extrabold text-base">Rp 15.000.000</span>
-            </div>
-            <input type="range" min="5000000" max="100000000" step="5000000" value="15000000" id="calc-slider" class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-orange-600" />
-            <div class="flex justify-between text-[11px] text-slate-400 font-medium">
-              <span>Rp 5 Juta</span><span>Rp 50 Juta</span><span>Rp 100 Juta</span>
-            </div>
-          </div>
-          <div class="space-y-3">
-            <span class="text-sm text-slate-600 font-semibold block">Target Kenaikan Pemasaran:</span>
-            <div class="grid grid-cols-3 gap-2" id="multiplier-group">
-              <button type="button" data-mult="2" class="mult-btn py-2 px-3 rounded-xl font-bold text-sm transition-all duration-300 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100">2x Lipat</button>
-              <button type="button" data-mult="3" class="mult-btn py-2 px-3 rounded-xl font-bold text-sm transition-all duration-300 bg-slate-900 text-white shadow-md">3x Lipat</button>
-              <button type="button" data-mult="4" class="mult-btn py-2 px-3 rounded-xl font-bold text-sm transition-all duration-300 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100">4x Lipat</button>
-            </div>
+      <div class="calc-card">
+        <div>
+          <div class="calc-label"><span>Omset Bulanan Saat Ini:</span><span class="strong" id="calc-initial-display">Rp 15.000.000</span></div>
+          <input type="range" min="5000000" max="100000000" step="5000000" value="15000000" id="calc-slider" aria-label="Omset bulanan saat ini" />
+          <div class="scale"><span>Rp 5 Juta</span><span>Rp 50 Juta</span><span>Rp 100 Juta</span></div>
+          <p style="font-weight:600;font-size:14px;color:var(--slate-600);margin-top:18px">Target Kenaikan Pemasaran:</p>
+          <div class="mult-group">
+            <button class="mult-btn" data-mult="2">2x Lipat</button>
+            <button class="mult-btn active" data-mult="3">3x Lipat</button>
+            <button class="mult-btn" data-mult="4">4x Lipat</button>
           </div>
         </div>
-
-        <div class="bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between h-full min-h-[220px]">
-          <div class="absolute right-0 bottom-0 w-24 h-24 bg-orange-600/10 rounded-full blur-xl"></div>
-          <div class="space-y-1">
-            <span class="text-slate-400 text-xs uppercase font-bold tracking-wider">Estimasi Omset Baru</span>
-            <div id="calc-result" class="text-3xl sm:text-4xl font-heading font-extrabold text-orange-500">Rp 45.000.000</div>
+        <div class="calc-result">
+          <div><span class="cap">Estimasi Omset Baru</span><div class="big" id="calc-result">Rp 45.000.000</div></div>
+          <div class="lines">
+            <div class="r"><span style="color:rgba(255,255,255,.6)">Tambahan Keuntungan:</span><span class="a" id="calc-net">+Rp 30.000.000</span></div>
+            <div class="r"><span style="color:rgba(255,255,255,.6)">Tingkat Pertumbuhan:</span><span class="b" id="calc-growth">+200%</span></div>
           </div>
-          <div class="space-y-2 pt-4 border-t border-white/10 text-xs sm:text-sm">
-            <div class="flex justify-between"><span class="text-white/60">Tambahan Keuntungan:</span><span id="calc-net" class="text-emerald-400 font-bold">+Rp 30.000.000</span></div>
-            <div class="flex justify-between"><span class="text-white/60">Tingkat Pertumbuhan:</span><span id="calc-growth" class="text-orange-400 font-bold">+200%</span></div>
-          </div>
-          <button onclick="claimCalc()" class="mt-4 bg-orange-600 hover:bg-orange-500 text-white text-xs sm:text-sm font-bold py-2.5 px-4 rounded-xl text-center transition-all duration-300 flex items-center justify-center gap-1.5 group">
-            <span>Klaim Hasil Omset Ini</span><i class="fa-solid fa-chevron-right group-hover:translate-x-0.5 transition-transform"></i>
-          </button>
+          <button class="btn btn-primary" style="font-size:14px;padding:10px" onclick="claimCalc()">Klaim Hasil Omset Ini <svg class="ic" style="width:16px;height:16px"><use href="#i-chevron-right"/></svg></button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- AI GENERATOR -->
-  <section id="ai-generator" class="py-16 px-6 md:px-12 bg-[#F8FAFC] border-b border-slate-200">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center space-y-3 mb-10">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-orange-100 text-orange-800 text-xs font-bold rounded-full uppercase tracking-wider">
-          <i class="fa-solid fa-wand-magic-sparkles text-orange-600"></i>
-          <span>Teknologi Digitalindo</span>
-        </div>
-        <h2 class="font-heading text-3xl font-extrabold text-slate-900 tracking-tight">Asisten Strategi Khusus UMKM Anda</h2>
-        <p class="text-slate-500 text-sm sm:text-base max-w-xl mx-auto">Masukkan bisnis Anda dan dapatkan taktik pemasaran digital 3 langkah berbiaya rendah secara instan!</p>
+  <!-- AI Generator -->
+  <section id="ai-generator" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow orange"><svg class="ic" style="width:14px;height:14px"><use href="#i-sparkles"/></svg> Teknologi Digitalindo</span>
+        <h2>Asisten Strategi Khusus UMKM Anda</h2>
+        <p>Masukkan bisnis Anda dan dapatkan taktik pemasaran digital 3 langkah berbiaya rendah secara instan!</p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        <div class="lg:col-span-5 bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-5">
-          <h3 class="font-heading font-extrabold text-slate-900 text-lg flex items-center justify-between">
-            <span>Rancang Rencana</span>
-            <button onclick="resetAi()" class="text-slate-400 hover:text-orange-600 text-xs flex items-center gap-1" title="Reset form"><i class="fa-solid fa-arrows-rotate"></i><span>Reset</span></button>
+      <div class="ai-grid">
+        <div class="ai-form-card">
+          <h3>Rancang Rencana
+            <button onclick="resetAi()" style="color:#94a3b8;font-size:12px;display:inline-flex;align-items:center;gap:4px" title="Reset"><svg class="ic" style="width:14px;height:14px"><use href="#i-refresh"/></svg> Reset</button>
           </h3>
-          <form id="ai-form" class="space-y-4">
-            <div class="space-y-1.5">
-              <label class="text-xs font-bold text-slate-600 uppercase tracking-wider">Nama Bisnis Anda</label>
-              <input type="text" id="ai-business-name" placeholder="Contoh: Kopi Kulo, Hijab Cantik" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm" required />
-            </div>
-            <div class="space-y-1.5">
-              <label class="text-xs font-bold text-slate-600 uppercase tracking-wider">Kategori/Bidang Bisnis</label>
-              <input type="text" id="ai-business-category" placeholder="Contoh: Kedai Kopi, Fashion Muslim" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm" required />
-            </div>
-            <div class="space-y-1.5">
-              <label class="text-xs font-bold text-slate-600 uppercase tracking-wider">Target Pelanggan</label>
-              <input type="text" id="ai-target-audience" placeholder="Contoh: Mahasiswa sekitar Depok" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm" required />
-            </div>
-            <button type="submit" id="ai-generate-btn" class="w-full bg-[#EA580C] hover:bg-orange-600 text-white font-bold py-3.5 px-4 rounded-xl text-sm transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-orange-600/20 active:scale-[0.98]">
-              <i class="fa-solid fa-wand-magic-sparkles"></i><span>Buatkan Strategi Sekarang</span>
-            </button>
+          <form id="ai-form">
+            <div class="field"><label>Nama Bisnis Anda</label><input type="text" id="ai-business-name" placeholder="Contoh: Kopi Kulo, Hijab Cantik" required /></div>
+            <div class="field"><label>Kategori/Bidang Bisnis</label><input type="text" id="ai-business-category" placeholder="Contoh: Kedai Kopi, Fashion Muslim" required /></div>
+            <div class="field"><label>Target Pelanggan</label><input type="text" id="ai-target-audience" placeholder="Contoh: Mahasiswa sekitar Depok" required /></div>
+            <button type="submit" id="ai-generate-btn" class="btn btn-primary" style="width:100%"><svg class="ic" style="width:16px;height:16px"><use href="#i-sparkles"/></svg> Buatkan Strategi Sekarang</button>
           </form>
         </div>
 
-        <div class="lg:col-span-7 space-y-6">
-          <div class="bg-slate-900 text-white border border-slate-800 rounded-3xl p-6 min-h-[340px] flex flex-col justify-between shadow-inner relative overflow-hidden">
-            <div class="absolute inset-0 bg-[radial-gradient(#ffffff03_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
-            <div class="relative z-10 space-y-4">
-              <div class="flex justify-between items-center border-b border-white/10 pb-3">
-                <span class="text-[10px] uppercase font-bold text-slate-400 flex items-center gap-1"><i class="fa-solid fa-wand-magic-sparkles text-orange-500"></i><span>Rencana Strategis Khusus</span></span>
-                <span id="ai-status" class="hidden text-orange-500 text-xs font-bold flex items-center gap-1.5"><i class="fa-solid fa-spinner fa-spin"></i>Sedang Mengetik...</span>
-                <span id="ai-done" class="hidden text-emerald-500 text-xs font-bold flex items-center gap-1"><i class="fa-solid fa-circle-check"></i>Strategi Siap!</span>
-              </div>
-              <div id="ai-empty" class="text-center py-16 text-slate-500 space-y-2">
-                <i class="fa-solid fa-wand-magic-sparkles text-3xl text-slate-700"></i>
-                <p class="font-bold text-sm">Belum Ada Strategi yang Dibuat</p>
-                <p class="text-xs max-w-xs mx-auto text-slate-600">Isi formulir di sebelah kiri untuk menghasilkan taktik pemasaran 3-langkah kustom secara instan.</p>
-              </div>
-              <div id="ai-output" class="hidden text-slate-200 text-sm leading-relaxed whitespace-pre-line overflow-y-auto max-h-[320px] pr-2"></div>
+        <div class="ai-output-box">
+          <div>
+            <div class="ai-head">
+              <span class="t"><svg class="ic" style="width:14px;height:14px"><use href="#i-sparkles"/></svg> Rencana Strategis Khusus</span>
+              <span id="ai-status" class="ai-status hidden"><svg class="ic spin" style="width:14px;height:14px"><use href="#i-spinner"/></svg> Sedang Mengetik...</span>
+              <span id="ai-done" class="ai-done hidden"><svg class="ic" style="width:14px;height:14px"><use href="#i-check"/></svg> Strategi Siap!</span>
             </div>
-            <div id="ai-footer" class="hidden border-t border-white/10 pt-4 mt-4 flex flex-col sm:flex-row justify-between items-center gap-3 relative z-10">
-              <div class="text-xs text-slate-400">Sukai rencana ini? Ambil langkah nyata!</div>
-              <button onclick="openLeadModal('Ingin eksekusi rencana strategi pemasaran')" class="bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs py-2 px-4 rounded-xl flex items-center gap-1 transition-all duration-300"><span>Eksekusi Bersama Ahli</span><i class="fa-solid fa-arrow-right"></i></button>
+            <div id="ai-empty" class="ai-empty">
+              <svg class="ic"><use href="#i-sparkles"/></svg>
+              <p class="b">Belum Ada Strategi yang Dibuat</p>
+              <p class="s">Isi formulir di sebelah kiri untuk menghasilkan taktik pemasaran 3-langkah kustom secara instan.</p>
             </div>
+            <div id="ai-output" class="ai-output hidden"></div>
+          </div>
+          <div id="ai-footer" class="ai-footer hidden">
+            <span class="s">Sukai rencana ini? Ambil langkah nyata!</span>
+            <button class="btn btn-primary" style="font-size:12px;padding:8px 16px" onclick="openLeadModal('Ingin eksekusi rencana strategi pemasaran')">Eksekusi Bersama Ahli <svg class="ic" style="width:14px;height:14px"><use href="#i-arrow-right"/></svg></button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BENEFITS -->
-  <section id="benefits" class="py-16 px-6 md:px-12 bg-white border-b border-slate-200">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center space-y-3 mb-12">
-        <span class="text-orange-600 text-xs font-bold uppercase tracking-widest">Keunggulan Layanan</span>
-        <h2 class="font-heading text-3xl font-extrabold text-slate-900 tracking-tight">Mengapa Memilih Digitalindo?</h2>
-        <p class="text-slate-500 text-sm max-w-lg mx-auto">Kami tidak menggunakan strategi teoritis besar-besaran, melainkan taktik praktis yang langsung menghasilkan uang untuk UMKM.</p>
+  <!-- Benefits -->
+  <section id="benefits" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow orange">Keunggulan Layanan</span>
+        <h2>Mengapa Memilih Digitalindo?</h2>
+        <p>Kami tidak menggunakan strategi teoritis besar-besaran, melainkan taktik praktis yang langsung menghasilkan uang untuk UMKM.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="border border-slate-200 rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:border-orange-500 transition-colors duration-300">
-          <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-[#EA580C]"><i class="fa-solid fa-bullseye text-xl"></i></div>
-          <h3 class="font-heading font-extrabold text-slate-900 text-lg">Pemasaran Tepat Sasaran</h3>
-          <p class="text-slate-500 text-sm">Menjangkau pelanggan yang benar-benar potensial dengan penargetan audiens berdasarkan minat, perilaku, dan kebutuhan mereka.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="tile tile-orange"><svg class="ic"><use href="#i-target"/></svg></div>
+          <h3>Pemasaran Tepat Sasaran</h3>
+          <p>Menjangkau pelanggan yang benar-benar potensial dengan penargetan audiens berdasarkan minat, perilaku, dan kebutuhan mereka.</p>
         </div>
-        <div class="border border-slate-200 rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:border-orange-500 transition-colors duration-300">
-          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600"><i class="fa-solid fa-dollar-sign text-xl"></i></div>
-          <h3 class="font-heading font-extrabold text-slate-900 text-lg">Biaya yang Dapat Disesuaikan</h3>
-          <p class="text-slate-500 text-sm">Iklan hemat mulai dari Rp 15.000 - Rp 50.000 per hari. Cocok untuk menguji pasar tanpa menguras anggaran kas bisnis.</p>
+        <div class="benefit-card">
+          <div class="tile tile-blue"><svg class="ic"><use href="#i-dollar"/></svg></div>
+          <h3>Biaya yang Dapat Disesuaikan</h3>
+          <p>Iklan hemat mulai dari Rp 15.000 - Rp 50.000 per hari. Cocok untuk menguji pasar tanpa menguras anggaran kas bisnis.</p>
         </div>
-        <div class="border border-slate-200 rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:border-orange-500 transition-colors duration-300">
-          <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600"><i class="fa-brands fa-whatsapp text-xl"></i></div>
-          <h3 class="font-heading font-extrabold text-slate-900 text-lg">Dipantau Lewat Handphone</h3>
-          <p class="text-slate-500 text-sm">Laporan performa penjualan dan kampanye harian yang dikirim langsung ke WhatsApp Anda, ringkas dan bebas pusing.</p>
+        <div class="benefit-card">
+          <div class="tile tile-emerald"><svg class="ic"><use href="#i-wa"/></svg></div>
+          <h3>Dipantau Lewat Handphone</h3>
+          <p>Laporan performa penjualan dan kampanye harian yang dikirim langsung ke WhatsApp Anda, ringkas dan bebas pusing.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-slate-900 text-white py-12 px-6 md:px-12 border-t border-slate-800">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-      <div class="space-y-3 md:col-span-2">
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">D</div>
-          <span class="font-heading text-lg font-bold tracking-tight text-white">Digitalindo</span>
-        </div>
-        <p class="text-slate-400 text-xs sm:text-sm max-w-sm">Membawa UMKM Indonesia melangkah maju, mandiri secara finansial, dan merajai penjualan pasar digital nasional.</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:12px"><div class="logo" style="width:32px;height:32px;font-size:18px">D</div><span class="name" style="color:#fff">Digitalindo</span></div>
+        <p class="desc">Membawa UMKM Indonesia melangkah maju, mandiri secara finansial, dan merajai penjualan pasar digital nasional.</p>
       </div>
-      <div class="space-y-2">
-        <h4 class="font-bold text-sm text-orange-500">Menu Utama</h4>
-        <ul class="text-slate-400 text-xs space-y-1">
-          <li><a href="#services" class="hover:text-white">Layanan</a></li>
-          <li><a href="#calculator" class="hover:text-white">Kalkulator Potensi</a></li>
-          <li><a href="#ai-generator" class="hover:text-white">Asisten Strategi</a></li>
-          <li><a href="#benefits" class="hover:text-white">Keunggulan</a></li>
+      <div>
+        <h4>Menu Utama</h4>
+        <ul>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#calculator">Kalkulator Potensi</a></li>
+          <li><a href="#ai-generator">Asisten Strategi</a></li>
+          <li><a href="#benefits">Keunggulan</a></li>
         </ul>
       </div>
-      <div class="space-y-2">
-        <h4 class="font-bold text-sm text-orange-500">Hubungi Kami</h4>
-        <ul class="text-slate-400 text-xs space-y-1">
+      <div>
+        <h4>Hubungi Kami</h4>
+        <ul>
           <li>info@digitalindo.net</li>
           <li>Pontianak, Indonesia</li>
           <li>+62 812-3456-789</li>
         </ul>
       </div>
     </div>
-    <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-slate-800 text-center text-slate-500 text-xs">
-      <p>© 2026 Digitalindo. Hak Cipta Dilindungi Undang-Undang.</p>
-    </div>
+    <div class="footer-bottom"><p>© 2026 Digitalindo. Hak Cipta Dilindungi Undang-Undang.</p></div>
   </footer>
 
-  <!-- LEAD MODAL -->
-  <div id="lead-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
-    <div class="bg-white rounded-3xl w-full max-w-lg shadow-2xl relative overflow-hidden flex flex-col max-h-[90vh]">
-      <div class="bg-gradient-to-r from-slate-900 to-slate-950 text-white p-6 relative">
-        <button onclick="closeLeadModal()" class="absolute top-4 right-4 text-white/70 hover:text-white p-1 rounded-full hover:bg-white/10 transition-colors"><i class="fa-solid fa-xmark text-lg"></i></button>
-        <div class="space-y-1.5 pr-8">
-          <div class="text-[10px] uppercase font-bold tracking-widest text-orange-500">Khusus Business Owner</div>
-          <h3 class="font-heading font-extrabold text-xl sm:text-2xl">Klaim Sesi Konsultasi Gratis</h3>
-          <p class="text-slate-300 text-xs sm:text-sm">Analisis peluang digital khusus bisnis Anda senilai Rp 1.500.000 — 100% Gratis!</p>
-        </div>
+  <!-- Lead Modal -->
+  <div id="lead-modal" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-head">
+        <button class="x" onclick="closeLeadModal()" aria-label="Tutup"><svg class="ic"><use href="#i-x"/></svg></button>
+        <div class="k">Khusus Business Owner</div>
+        <h3>Klaim Sesi Konsultasi Gratis</h3>
+        <p>Analisis peluang digital khusus bisnis Anda senilai Rp 1.500.000 — 100% Gratis!</p>
       </div>
-      <div class="p-6 overflow-y-auto space-y-4">
-        <div id="lead-success" class="hidden text-center py-6 space-y-4">
-          <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto text-emerald-600"><i class="fa-solid fa-circle-check text-4xl"></i></div>
-          <div class="space-y-2">
-            <h4 class="font-heading font-extrabold text-slate-900 text-lg sm:text-xl">Konsultasi Anda Terjadwal!</h4>
-            <p class="text-slate-500 text-xs sm:text-sm max-w-sm mx-auto">Terima kasih telah mendaftar. Tim kami akan menghubungi Anda via WhatsApp dalam 1x24 jam.</p>
-          </div>
-          <button onclick="closeLeadModal()" class="bg-slate-900 text-white hover:bg-orange-600 px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-300">Tutup Jendela</button>
+      <div class="modal-body">
+        <div id="lead-success" class="success-box hidden">
+          <div class="ico"><svg class="ic"><use href="#i-check"/></svg></div>
+          <h4>Konsultasi Anda Terjadwal!</h4>
+          <p>Terima kasih telah mendaftar. Tim kami akan menghubungi Anda via WhatsApp dalam 1x24 jam.</p>
+          <button class="btn btn-dark" onclick="closeLeadModal()">Tutup Jendela</button>
         </div>
-        <form id="lead-form" class="space-y-4">
-          <div id="lead-error" class="hidden bg-rose-50 text-rose-700 p-3 rounded-xl text-xs font-semibold"></div>
-          <div class="space-y-1">
-            <label class="text-xs font-bold text-slate-500 uppercase tracking-wide">Nama Lengkap Anda</label>
-            <input type="text" id="lead-name" placeholder="Contoh: Budi Santoso" class="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm" />
-          </div>
-          <div class="space-y-1">
-            <label class="text-xs font-bold text-slate-500 uppercase tracking-wide">Nama Bisnis / UMKM</label>
-            <input type="text" id="lead-business" placeholder="Contoh: CV Sejahtera Bersama" class="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm" />
-          </div>
-          <div class="space-y-1">
-            <label class="text-xs font-bold text-slate-500 uppercase tracking-wide">Alamat Email (Opsional)</label>
-            <input type="email" id="lead-email" placeholder="Contoh: budi@gmail.com" class="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm" />
-          </div>
-          <div class="space-y-1">
-            <label class="text-xs font-bold text-slate-500 uppercase tracking-wide">No. WhatsApp Aktif</label>
-            <input type="tel" id="lead-phone" placeholder="Contoh: 08123456789" class="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm" />
-          </div>
-          <div class="space-y-1">
-            <label class="text-xs font-bold text-slate-500 uppercase tracking-wide">Ceritakan Tantangan Bisnis Anda</label>
-            <textarea id="lead-desc" rows="3" placeholder="Contoh: Kurang pelanggan baru, ingin pasang iklan..." class="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm"></textarea>
-          </div>
-          <button type="submit" class="w-full bg-[#EA580C] hover:bg-orange-600 text-white font-bold py-3.5 px-4 rounded-xl text-sm transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-orange-600/20 active:scale-95 mt-2">
-            <i class="fa-solid fa-circle-check"></i><span>Kirim &amp; Jadwalkan Sekarang</span>
-          </button>
+        <form id="lead-form">
+          <div id="lead-error" class="alert-error hidden"></div>
+          <div class="field"><label>Nama Lengkap Anda</label><input type="text" id="lead-name" placeholder="Contoh: Budi Santoso" /></div>
+          <div class="field"><label>Nama Bisnis / UMKM</label><input type="text" id="lead-business" placeholder="Contoh: CV Sejahtera Bersama" /></div>
+          <div class="field"><label>Alamat Email (Opsional)</label><input type="email" id="lead-email" placeholder="Contoh: budi@gmail.com" /></div>
+          <div class="field"><label>No. WhatsApp Aktif</label><input type="tel" id="lead-phone" placeholder="Contoh: 08123456789" /></div>
+          <div class="field"><label>Ceritakan Tantangan Bisnis Anda</label><textarea id="lead-desc" rows="3" placeholder="Contoh: Kurang pelanggan baru, ingin pasang iklan..."></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%"><svg class="ic" style="width:16px;height:16px"><use href="#i-check"/></svg> Kirim &amp; Jadwalkan Sekarang</button>
         </form>
       </div>
     </div>
   </div>
 
-  <!-- TOAST -->
-  <div id="toast" class="hidden fixed bottom-5 right-5 z-50 max-w-sm rounded-2xl p-4 shadow-2xl border transition-all duration-500 flex items-start gap-3 bg-white border-slate-200">
-    <div id="toast-icon" class="w-8 h-8 rounded-full flex items-center justify-center shrink-0 bg-emerald-100 text-emerald-600"><i class="fa-solid fa-circle-check"></i></div>
-    <div class="space-y-1">
-      <h5 class="font-bold text-slate-900 text-sm">Notifikasi</h5>
-      <p id="toast-msg" class="text-slate-500 text-xs leading-relaxed"></p>
-    </div>
+  <!-- Toast -->
+  <div id="toast" class="toast hidden">
+    <div id="toast-icon" class="ico ok"><svg class="ic"><use href="#i-check"/></svg></div>
+    <div><h5>Notifikasi</h5><p id="toast-msg"></p></div>
   </div>
 
-  <script src="script.js"></script>
 </body>
 </html>
